@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+
+
+  <!-- Oooooh, what's this ng-app business thing? -->
+  <body>
+    <div class="container" ng-app="myApp">
+
+      <div class="hero-unit">
+        <h1>John's Angular Demo!</h1>
+        <p> A guide for the mildly interested! </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#/hello-world"> Hello World! </a>
+          </li>
+          <li>
+            <a href="#/ny-times">A very boring New York Times example</a>
+          </li>
+        </ul>
+      </nav>
+
+
+    <!-- Here be Angular stuff. Pay attention! -->
+    <div ng-view>
+    </div>
+
+    <!-- this is just regular stuff. Nothing to see here. Move along. -->
+      <div class="notes">
+        <p> These are things that we'll be going through. </p>
+        <ul>
+          <li> Getting <b>AngularJS</b> set up! </li>
+          <li> How to structure a simple <b>AngularJS</b> app</li>
+          <li> <b>AngularJS</b> directives? What's that? </li>
+          <li> Controllers and $scope</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- angular stuff -->
+    <script src="components/angular/angular.js"></script>
+    <script src="components/angular-resource/angular-resource.js"></script>
+
+
+    <!-- my stuff -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/hello.js"></script>
+
+
+    <!-- more of my stuff -->
+    <script src="scripts/services/nytimes.js"></script>
+    <script src="scripts/controllers/nytimes.js"></script>
+
+  </body>
+</html>

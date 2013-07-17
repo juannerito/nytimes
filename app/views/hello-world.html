@@ -1,0 +1,20 @@
+<!--
+	ngView is a directive that complements the $route service by including the rendered template of the current route into the main layout (index.html) file.
+
+	Every time the current route changes, the included view changes with it according to the configuration of the $route service.
+-->
+
+<h3> A very simple thing to start with!</h3>
+
+<div class="demo">
+	<div > <!--  -->
+		<label> Name: </label>
+		<input type="text" ng-model="firstname"  placeholder="First"/>
+		<input type="text" ng-model="lastname" placeholder="Last" />
+
+		<h4 ng-bind-template="{{firstname}} {{lastname}}"></h4>
+
+	</div>
+</div>
+
+

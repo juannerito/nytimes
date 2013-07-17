@@ -1,0 +1,25 @@
+<ul>
+	<li ng-repeat="num in myArrayOfPrimitives">
+       <input ng-model="num">
+    </li>
+<ul>
+
+<ul>
+	<li ng-repeat="obj in myArrayOfObjects">
+       <input ng-model="obj.num">
+    </li>
+<ul>
+
+
+<script type="text/ng-template" id="/tpl1.html">
+    <input ng-model="$parent.myPrimitive">
+</script>
+<div ng-include src="'/tpl1.html'"></div>
+
+
+
+<script type="text/ng-template" id="/tpl2.html">
+    <input ng-model="myObject.aNumber">
+</script>
+<div ng-include src="'/tpl2.html'"></div>
+
