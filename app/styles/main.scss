@@ -5,7 +5,8 @@
 	p{
 		font-style: italic;
 		font-family:  Georgia;
-		font-size: 14px
+		font-size: 17px;
+		margin-top: 15px
 	}
 }
 
@@ -39,9 +40,74 @@ nav li {
 }
 
 .demo {
-	background-color: #ffe;
-	border: 1px solid #999;
+	background-color: #eff;
+	border: 1px solid #dfe;
 	border-radius: 10px;
-	padding: 40px 40px;
+	padding: 35px 40px;
 	margin-bottom: 100px;
+}
+
+.ny-times {
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;	
+		li {
+			padding: 7px 0 6px 6px ;
+			&.selected {
+				border: 1px solid #333;
+				border-width: 1px 0 1px 1px;
+				padding: 6px 0 5px 5px;
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+				position: relative;
+				margin-right: -1px;
+				z-index: 1;
+				background: #fff;
+			}
+		}
+	}
+	section {
+		float: left;
+		width: 40%;
+		&.step-1{
+			li {
+				cursor: pointer;
+			}
+
+		}
+		&.step-2{
+			background: #fff;
+			width: 59%;
+			border: 1px solid #333;
+			border-width: 1px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+			padding-top: 20px;
+			ol {
+				list-style: none;
+				li{
+					border-bottom: 1px solid #bbb;
+					margin-bottom: 16px;
+					padding-bottom: 10px;
+				}
+			}
+			.details {
+				img{
+					display: block;
+					float: left;
+					margin-right: 10px
+				}
+				.text {
+					float: left;
+					width: 300px;
+				}
+			}
+
+		}
+	}
+
+
+
+
 }

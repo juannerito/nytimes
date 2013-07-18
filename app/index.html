@@ -10,18 +10,33 @@
   <body>
     <div class="container" ng-app="myApp">
 
+      <!-- 
+        Directives are a way to teach HTML new tricks. During DOM compilation
+        directives are matched against the HTML and executed. This allows 
+        directives to register behavior, or transform the DOM. 
+
+        ng-app is a built-in directive
+      -->
+
+
       <div class="hero-unit">
-        <h1>John's Angular Demo!</h1>
+        <h1>An Angular Demo (Of Sorts!)</h1>
         <p> A guide for the mildly interested! </p>
       </div>
 
       <nav>
         <ul>
           <li>
+            <a href="#/"> Home (I have no home!) </a>
+          </li>
+          <li>
             <a href="#/hello-world"> Hello World! </a>
           </li>
           <li>
             <a href="#/ny-times">A very boring New York Times example</a>
+          </li>
+           <li >
+            <span>A slightly less boring New York Times example</span>
           </li>
         </ul>
       </nav>
@@ -33,13 +48,16 @@
 
     <!-- this is just regular stuff. Nothing to see here. Move along. -->
       <div class="notes">
-        <p> These are things that we'll be going through. </p>
+        <p> These are things that we'll be going through (in this order). </p>
         <ul>
           <li> Getting <b>AngularJS</b> set up! </li>
           <li> How to structure a simple <b>AngularJS</b> app</li>
-          <li> <b>AngularJS</b> directives? What's that? </li>
+          <li> <b>AngularJS</b> directives? Say wut?!? </li>
           <li> Controllers and $scope</li>
+          <li> Services and Dependency Injection</li>
+          <li> Directives </li>
         </ul>
+
       </div>
     </div>
 
@@ -56,6 +74,10 @@
     <!-- more of my stuff -->
     <script src="scripts/services/nytimes.js"></script>
     <script src="scripts/controllers/nytimes.js"></script>
+    <script src="scripts/directives/best-sellers.js"></script>
+
+
+
 
   </body>
 </html>
