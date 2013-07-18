@@ -8,11 +8,13 @@ angular.module('myApp', ['ngResource'])
     $routeProvider
       .when('/hello-world', {
         templateUrl: 'views/hello-world.html'
-        ,controller: 'HelloCtrl'
       })
       .when('/ny-times', {
-        templateUrl: 'views/best-sellers.html',
-        controller: 'BestSellersCtrl'
+        templateUrl: 'views/ny-times.html',
+        controller: 'NyTimesCtrl'
+      })
+      .when('/ny-times-directive', {
+        templateUrl: 'views/ny-times-directive.html'
       })
       .otherwise({
         redirectTo: '/'

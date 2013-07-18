@@ -1,0 +1,32 @@
+<div class="demo ny-times clearfix">
+
+	<h3>New York Times Best Sellers Lists</h3>
+	<h4>Choose a list!</h4>
+	<section class="step-1">
+	
+		<ul>
+			<li ng-class="getClass($index)" ng-repeat="list in lists" ng-click="selectList($index)">
+				 {{list.list_name}}
+			</li>
+		</ul>
+		
+	</section>
+
+
+	<section class="step-2" ng-show="listChosen">
+		<ol>
+			<li ng-repeat='book in bestsellers'>
+				<div class="details clearfix"> 
+					<img ng-src="{{book.book_details[0].book_image}}" width="80">
+					<div class="text">
+						<p><strong> {{book.rank}}:<strong> {{book.book_details[0].title}} 
+							<br>  <em>{{book.book_details[0].author}}</em></p>
+					</div>
+				</div>
+			</li>
+		</ol>
+	</section>
+</div>
+
+
+

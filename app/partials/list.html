@@ -1,0 +1,12 @@
+<section class="step-2" ng-show="listChosen">
+	<ol>
+		<li ng-repeat='book in bestsellers'>
+			<div class="details clearfix"> 
+				<img ng-src="{{book.book_details[0].book_image}}" width="80">
+				<div class="text">
+					<p><strong> {{book.rank}}:<strong> {{book.book_details[0].title}} - {{book.book_details[0].author}}</p>
+				</div>
+			</div>
+		</li>
+	</ol>
+</section>

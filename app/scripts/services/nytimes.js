@@ -1,11 +1,18 @@
 /**
- *  NY Times services
+ * NY Times services
+*
+ * A factory which creates a resource object that lets you interact with 
+ * RESTful server-side data sources.
+ * The returned resource object has action methods which provide high-level 
+ * behaviors without the need to interact with the low level $http service.
  */
 
 angular.module('myApp').factory('nyTimesBestSellersService',
-    function($resource) {
+    function($resource) { /*  <-- dependency injection!  */
+      'use strict';
+      var listNamesUri = 'http://api.nytimes.com/svc/books/v2/lists/names.jsonp';
+      var listUri = 'http://api.nytimes.com/svc/books/v2/lists/:listName.jsonp';
 
-      var resourceUri = 'http://api.nytimes.com/svc/books/v2/lists/names.jsonp'
 
       var params = {
         'callback': 'JSON_CALLBACK',
@@ -13,17 +20,18 @@ angular.module('myApp').factory('nyTimesBestSellersService',
       };
 
       var actions = {
-        list : {
+        get : {
           method: 'JSONP'
         }
       };
 
-      var Lists = $resource(resourceUri, params, actions);
-
       return {
-        getLists: function() {
-          return Lists;
+        listOfLists: function() {
+          return $resource(listNamesUri, params, actions);
         },
+        list: function(){
+          return $resource(listUri, params, actions);
+        }
 
       };
 });

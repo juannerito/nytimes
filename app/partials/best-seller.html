@@ -1,0 +1,7 @@
+<section class="step-1">
+	<ul>
+		<li ng-class="getClass($index)" ng-repeat="list in lists" ng-click="selectList($index)">
+			{{list.list_name}}
+		</li>
+	</ul>
+</section>
